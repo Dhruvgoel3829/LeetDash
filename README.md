@@ -1,6 +1,6 @@
 # ESP32 LeetCode Statistics Dashboard
 
-A real-time LeetCode statistics dashboard built with ESP32 and TFT display. This project fetches your LeetCode profile data and displays it on a beautiful TFT screen with animated progress arcs.
+A real-time LeetCode statistics dashboard built with ESP32 and TFT display. This project fetches your LeetCode profile data and displays it on a beautiful TFT screen with animated progress arcs. LeetCode data fetch [API](https://github.com/Dhruvgoel3829/LeetDash-API)
 
 ## 🚀 Features
 
@@ -41,8 +41,8 @@ The dashboard shows:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/esp_dash.git
-cd esp_dash
+git clone https://github.com/Dhruvgoel3829/LeetDash.git
+cd LeetDash
 ```
 
 ### 2. Configure Your Settings
@@ -76,17 +76,18 @@ Using Arduino IDE:
 
 ## 🔌 Pin Connections
 
-Connect your TFT display to the ESP32 according to your display's specifications. Common connections include:
+Connect your TFT display to the ESP32 according to your display's specifications. This project uses connections:
 
 - **VCC** → 3.3V
 - **GND** → GND
 - **SCK** → GPIO18
 - **MOSI** → GPIO23
-- **CS** → GPIO5
-- **DC** → GPIO2
-- **RST** → GPIO4
+- **CS** → GPIO22
+- **DC** → GPIO22
+- **RST** → GPIO17
 
 *Note: Pin assignments may vary based on your specific TFT display model.*
+*Please update your **User_setup.h** under **TFT_eSPI** according to your configuration.*
 
 ## 🌐 API Integration
 
@@ -156,9 +157,6 @@ int totalQue = 3600;  // Total problems
 - Check internet connectivity
 - The API may have rate limits
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
@@ -178,5 +176,10 @@ If you encounter any issues or have questions:
 - LeetCode for providing the statistics API
 
 ---
+
+## 🚧 Future Improvements
+
+1. Currently working on integrating the [WiFiManager](https://github.com/tzapu/WiFiManager) library by [tzapu](https://github.com/tzapu) for easier Wi-Fi configuration.
+2. Planned support for the **LVGL** graphics library with touch controls or physical button interaction in future versions.
 
 **Happy Coding! 🚀** 
