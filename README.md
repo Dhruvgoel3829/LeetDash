@@ -82,8 +82,9 @@ Connect your TFT display to the ESP32 according to your display's specifications
 - **GND** → GND
 - **SCK** → GPIO18
 - **MOSI** → GPIO23
+- **MISO** → GPIO19 
 - **CS** → GPIO22
-- **DC** → GPIO22
+- **DC** → GPIO21
 - **RST** → GPIO17
 
 *Note: Pin assignments may vary based on your specific TFT display model.*
